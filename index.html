@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      My Portfolio
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 id="logo">Haris Mahmood</h1>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Myself</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="/contact.html">Contact Information</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Myself</h2>
+            <p>
+              A resourceful and groomed individual having degree in Electrical Engineering from University of Central Punjab with 4 years of relevant experience. Currently working as a Project Engineer in a renewable energy sector for incorporation of my engineering and project management skills as well as my experience to gain organization and personal goals.
+            </p>
+            <p>
+              <br>
+            </p>
+            <p>
+              My area of experties includes supervision of solar projects for both On-grid and Off-grid systems, ranging from 3Kw to 25Kw at residential and commercial level as well. Have interest in watching documentries, movies and playing indoor activities.
+            </p>
+          </div>
+          <img src="https://scontent.flhe5-1.fna.fbcdn.net/v/t1.6435-9/161466272_3860932593945552_6589631863528421228_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEyeSjqQ4vaAkYHVxwbp82JTjni1w9PcdlOOeLXD09x2ckVYaf8C7QtFX1T62HcqKf9dL_NhwXl8vzkWeazRc5d&_nc_ohc=c-4QbBI7Ju4AX8fjr8O&tn=WHKIKzgmRZEDFRPP&_nc_ht=scontent.flhe5-1.fna&oh=d222ce2ae0bb78d6c013b399e0a27f7a&oe=61969D0D" class="portrait">
+        </div>
+      </section>
+      <p>
+        <br>
+      </p>
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Air Water Cooler</h3>
+          </summary>
+          <img
+            src="https://www.pngitem.com/pimgs/m/133-1332157_how-does-an-evaporate-air-cooler-work-air.png"
+            alt="intelligent air water cooler"
+            class="project-image"
+          />
+          <p class="project-description">
+            Intelligent air water cooler for monitoring user defined temperature and humidity levels.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Anti-Lock Braking System for Two Wheelers</h3>
+          </summary>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ3UEGKdI4Jfjp_r2FnqYaVbe4LySNvQH55IkteG9zC2gn98lxwZWAjdpo-q240gock40&usqp=CAU"
+            alt="Anti-Lock braking system for two wheelers"
+            class="project-image"
+          />
+          <p class="project-description">
+            Anti-Lock braking system for two wheelers, suitable for bikes & scooters.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Smart Smoke Detector</h3>
+          </summary>
+          <img
+            src="https://iotdesignpro.com/sites/default/files/main-image/IoT-based-Fire-Alarm-System-using-NodeMCU-ESP8266_0.jpg"
+            alt='Smart Smoke Detector'
+            class="project-image"
+          />
+          <p class="project-description">
+            This smart smoke detector is based on IOT system. It has the capability to trigger and generate alert through handheld devices.
+          </p>
+        </details>
+      </section>
+      <p>
+        <br>
+      </p>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <div class="project-description">
+            Communication
+          <progress id="file" value="32" max="100"> 32% </progress>
+          </div>
+          <div  class="project-description">
+            Leadership
+          <progress id="file" value="65" max="100"> 65% </progress>
+          </div>
+          <div  class="project-description">
+            Adaptibility
+          <progress id="file" value="82" max="100"> 82% </progress>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Page 1 of 1</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-1815";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
